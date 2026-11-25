@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store MIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header class="brand">
+      <div class="brand-mark" aria-hidden="true">M</div>
+      <h1>Clothing Store MIS</h1>
+      <p class="subtitle">Management Information System</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Account options">
+      <button class="tab active" id="signInTab" type="button"
+        role="tab" aria-selected="true" aria-controls="signInPanel">
+        Sign In
+      </button>
+
+      <button class="tab" id="signUpTab" type="button"
+        role="tab" aria-selected="false" aria-controls="signUpPanel">
+        Sign Up
+      </button>
+    </div>
+
+    <p class="message" id="message" role="status"></p>
+
+    <section id="signInPanel" role="tabpanel" aria-labelledby="signInTab">
+      <form id="signInForm">
+        <div class="field">
+          <label for="signInEmail">Email address</label>
+          <input id="signInEmail" type="email"
+            placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="signInPassword">Password</label>
+          <input id="signInPassword" type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password" required>
+        </div>
+
+        <div class="row">
+          <label class="remember">
+            <input type="checkbox">
+            Remember me
+          </label>
+          <a href="#" id="forgotPassword">Forgot password?</a>
+        </div>
+
+        <button class="submit-button" type="submit">Sign In</button>
+      </form>
+    </section>
+
+    <section id="signUpPanel" role="tabpanel"
+      aria-labelledby="signUpTab" hidden>
+      <form id="signUpForm">
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input id="fullName" type="text"
+            placeholder="Your name" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="signUpEmail">Email address</label>
+          <input id="signUpEmail" type="email"
+            placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="role">Store role</label>
+          <select id="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="manager">Store Manager</option>
+            <option value="cashier">Cashier</option>
+            <option value="inventory">Inventory Staff</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="signUpPassword">Create password</label>
+          <input id="signUpPassword" type="password"
+            placeholder="At least 8 characters"
+            minlength="8" autocomplete="new-password" required>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <input id="confirmPassword" type="password"
+            placeholder="Enter password again"
+            minlength="8" autocomplete="new-password" required>
+        </div>
+
+        <button class="submit-button" type="submit">Create Account</button>
+      </form>
+    </section>
+
+    <p class="footer">© 2026 Clothing Store MIS</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
